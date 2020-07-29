@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokeballs vs bricks</title>
+    <link href="bubble.css" rel="stylesheet" />
+<script type="text/javascript" src="bubble.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div id="loader">
+            <img class="loading-img" src="https://luis72353.github.io/pokeballs-vs-bricks/graphics/loader.gif" alt="">
+            <div id="loading" class="loading">
+                <span>L</span>
+                <span>O</span>
+                <span>A</span>
+                <span>D</span>
+                <span>I</span>
+                <span>N</span>
+                <span>G</span>
+            </div>
+            <div id="progress">waiting...</div>
+            <div id="size"></div>
+            <button id="userInteraction" >Download<br>2.59MB</button>
+        </div>
+        <header>
+            <div class="inner_header">
+                <div class="coins">
+                    <img src="https://luis72353.github.io/pokeballs-vs-bricks/graphics/coin.png" width="30">X
+                    <span id="coins">0</span>
+                </div>
+                <div class="balls">
+                    <img src="https://luis72353.github.io/pokeballs-vs-bricks/graphics/pokeball.png" width="30">X
+                    <span id="balls">1</span>
+                </div>
+                <div class="score">
+                    <img src="https://luis72353.github.io/pokeballs-vs-bricks/graphics/trofeo.png" width="30">
+                    <span id="score">0</span>
+                </div>
+            </div>
+        </header>
+        <div id="canvas"></div>
+    </div>
+
+    <script type="module" async>
+import { createScreen, appendScreens } from "https://luis72353.github.io/pokeballs-vs-bricks/js/Screen.js";
+
+import * as myMaths from "https://luis72353.github.io/pokeballs-vs-bricks/js/Maths.js";
+
+import Engine from "https://luis72353.github.io/pokeballs-vs-bricks/js/engine/Engine.js";
+
+import LoadManager from "https://luis72353.github.io/pokeballs-vs-bricks/js/loads/LoadManager.js";
+
+import * as util from "https://luis72353.github.io/pokeballs-vs-bricks/js/Util.js";
+
+import {CANVAS_WIDTH, CANVAS_HEIGHT } from "https://luis72353.github.io/pokeballs-vs-bricks/js/const.js";
+
+import Cannon from "https://luis72353.github.io/pokeballs-vs-bricks/js/entities/Cannon.js";
+
+import { balls, bricks, effects, obtainableBalls } from "https://luis72353.github.io/pokeballs-vs-bricks/js/entities/Entity.js";
+
+import Brick, { Treasure } from "https://luis72353.github.io/pokeballs-vs-bricks/js/entities/Brick.js";
+
+import { Particle, DestroyEffect } from "https://luis72353.github.io/pokeballs-vs-bricks/js/entities/Paticle.js";
+
+import Ball, { ObtainableBall } from "https://luis72353.github.io/pokeballs-vs-bricks/js/entities/Ball.js";
+
+
+
+window.createScreen=createScreen;
+window.appendScreens=appendScreens;
+
+window.myMaths=myMaths;
+
+window.Engine=Engine;
+window.LoadManager=LoadManager;
+window.util=util;
+
+window.CANVAS_WIDTH=CANVAS_WIDTH;
+window.CANVAS_HEIGHT=CANVAS_HEIGHT;
+window.Cannon=Cannon;
+
+window.balls=balls;
+window.bricks=bricks;
+window.effects=effects;
+window.obtainableBalls=obtainableBalls;
+
+window.Brick=Brick;
+window.Treasure= Treasure;
+
+window.Particle=Particle;
+window.DestroyEffect=DestroyEffect;
+
+window.Ball=Ball;
+window.ObtainableBall=ObtainableBall;
+
+
+    </script>
+</body>
+
+</html>
